@@ -21,8 +21,9 @@ class Car {
     }
 
     public void 엑셀밟기(int level){
-        if(!기어상태.equals("d")){
+        if(!기어상태.equals("전진")){
             System.out.println("기어 변경을 d로 해주세요");
+            return;
         }
         속력 = level * 엔진파워;
     }
