@@ -1,69 +1,20 @@
 package ex04;
 
-class Car {
-    private String 기어상태; // d(전진), r(후진), p(파킹)
-    private int 속력;
-    private int 엔진파워;
-    private String 색상;
-
-    public Car(int 엔진파워, String 색상) {
-        this.엔진파워 = 엔진파워;
-        this.색상 = 색상;
-        this.기어상태 = "p";
-    }
-    
-    public void 기어변경(String state){
-        if(state.equals("d")){
-            기어상태 = "전진";
-        }else if(state.equals("r")){
-            기어상태 = "후진";
-        }
-    }
-
-    public void 엑셀밟기(int level){
-        if(!기어상태.equals("전진")){
-            System.out.println("기어 변경을 d로 해주세요");
-            return;
-        }
-        속력 = level * 엔진파워;
-    }
-
-    public String get기어상태() {
-        return 기어상태;
-    }
-
-    public int get속력() {
-        return 속력;
-    }
-
-    public int get엔진파워() {
-        return 엔진파워;
-    }
-
-    public String get색상() {
-        return 색상;
-    }
+/**
+ * 토키 굴 속에 갇힌 엘리스
+ * 토키 굴 끝에 작은 문이 보였다.
+ * 탁자위 황금 열쇠로 문을 열었지만, 문이 너무 작아서 나갈 수 없었다.
+ * 작은 병에 든 것을 마셨더니 키가 10인치로 작아졌다. (상태는 행위를 통해 변경된다)
+ */
+class Ellis {
+    public int height;
 }
 
 public class OOPEx01 {
     public static void main(String[] args) {
-        Car car = new Car(30, "노랑");
-        System.out.println("색상 : "+car.get색상());
-        System.out.println("엔진파워 : "+car.get엔진파워());
-        System.out.println("기어상태 : "+car.get기어상태());
-        System.out.println("속력 : "+car.get속력());
-        System.out.println("===========================");
-
-        car.엑셀밟기(1);
-        System.out.println("속력 : "+car.get속력());
-        System.out.println("===========================");
-
-        car.기어변경("d");
-        System.out.println("기어상태 : "+car.get기어상태());
-        System.out.println("===========================");
-
-        car.엑셀밟기(2);
-        System.out.println("속력 : "+car.get속력());
-        System.out.println("===========================");
+        Ellis ellis = new Ellis();
+        // 이렇게 변경되는 것은 마법이다.
+        ellis.height = 10;
+        System.out.println("엘리스의 키 : "+ellis.height);
     }
 }

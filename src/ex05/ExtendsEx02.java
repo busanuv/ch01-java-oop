@@ -1,7 +1,8 @@
 package ex05;
 
 /**
- * 추상화와 재사용의 목적이 있다.
+ * 상속은 반드시 추상화 되어야 한다.
+ * 재사용은 부가적인 효과이다.
  */
 class Button {
     String color = "blue";

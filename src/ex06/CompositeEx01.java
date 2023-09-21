@@ -12,6 +12,9 @@ class Coke {
     String name = "콜라";
 }
 
+/**
+ * 재사용의 목적이 있다면, 상속이 아닌, 컴퍼지션 (결합) 하라.
+ */
 class HamburgerSet {
     Hamburger hamburger;
     Potato potato;
